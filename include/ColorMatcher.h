@@ -1,17 +1,35 @@
-#ifndef COLORMATCHER_H
-#define COLORMATCHER_H
+/**
+ * @file ColorMatcher.h
+ * @brief Заголовочный файл для класса ColorMatcher.
+ */
 
-#include <opencv2/opencv.hpp>
-#include <vector>
+ #pragma once
 
-class ColorMatcher {
-public:
-    // Возвращает цвета, которые сочетаются с заданным цветом
+ #include <opencv2/opencv.hpp>
+ #include <vector>
 
-    static cv::Scalar getComplementaryColor(const cv::Scalar& color);
+ 
+ /**
+  * @class ColorMatcher
+  * @brief Класс для подбора сочетаний цветов.
+  *
+  * Этот класс предоставляет методы для нахождения комплиментарного цвета.
+  */
+ class ColorMatcher {
+ public:
+     /**
+      * @brief Находит комплиментарный цвет для заданного цвета.
+      * @param color Цвет в формате cv::Vec3b.
+      * @return Комплиментарный цвет в формате cv::Vec3b.
+      */
+     static cv::Scalar getComplementaryColor(const cv::Scalar& color);
+ 
+     /**
+      * @brief Находит комплиментарный цвет для заданного цвета.
+      * @param color Цвет в формате cv::Scalar.
+      * @return Комплиментарный цвет в формате cv::Scalar.
+      */
+     static cv::Vec3b getComplementaryColor(const cv::Vec3b& color);
+ };
+ 
 
-    // Преобразует цвет в дополнительный (complementary color)
-    static cv::Vec3b getComplementaryColor(const cv::Vec3b& color);
-};
-
-#endif
