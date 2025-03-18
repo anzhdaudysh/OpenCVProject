@@ -19,13 +19,10 @@
  
 
      uchar hue = hsvColor.at<cv::Vec3b>(0, 0)[0];
- 
-
      uchar complementaryHue = (hue + 90) % 180; 
  
 
      cv::Vec3b complementaryHsv(complementaryHue, hsvColor.at<cv::Vec3b>(0, 0)[1], hsvColor.at<cv::Vec3b>(0, 0)[2]);
- 
 
      cv::Mat complementaryHsvMat(1, 1, CV_8UC3, complementaryHsv);
      cv::Mat complementaryBgrMat;

@@ -35,8 +35,8 @@
      }
  
 
-     cv::GaussianBlur(image, image, cv::Size(5, 5), 0);
-     cv::medianBlur(image, image, 5);
+    //  cv::GaussianBlur(image, image, cv::Size(5, 5), 0);
+    //  cv::medianBlur(image, image, 5);
  
 
      double gamma = 1.5;

@@ -14,6 +14,8 @@ set(SOURCES
     src/ImageProcessor.cpp
     src/ColorDetector.cpp
     src/ColorMatcher.cpp
+    src/NormalizeImage.cpp
+    src/SelectArea.cpp
     src/main.cpp
 )
 
